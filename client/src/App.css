@@ -1,22 +1,119 @@
 .App {
-  text-align: center;
+text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+background-color: #282c34;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: calc(10px + 2vmin);
+color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+color: #09d3ac;
+}
+
+.mediaViewInfo {
+  --web-view-name: MainPage;
+  --web-view-id: MainPage;
+  --web-scale-on-resize: true;
+  --web-center-horizontally: true;
+  --web-enable-deep-linking: true;
+}
+:root {
+  --web-view-ids: MainPage;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+#MainPage {
+  position: absolute;
+  width: 375px;
+  height: 894px;
+  background-color: rgba(255,255,255,1);
+  overflow: hidden;
+  --web-view-name: MainPage;
+  --web-view-id: MainPage;
+  --web-scale-on-resize: true;
+  --web-center-horizontally: true;
+  --web-enable-deep-linking: true;
+}
+#Status_Bar_1_er {
+  position: absolute;
+  width: 375px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Hi_Trinh {
+  left: 27px;
+  top: 61px;
+  position: absolute;
+  overflow: visible;
+  width: 81px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(61,75,73,1);
+  letter-spacing: 0.04px;
+}
+#Prescription {
+  left: 32px;
+  top: 124px;
+  position: absolute;
+  overflow: visible;
+  width: 72px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(61,75,73,1);
+  letter-spacing: 0.04px;
+}
+#Delivery {
+  left: 164px;
+  top: 124px;
+  position: absolute;
+  overflow: visible;
+  width: 48px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(61,75,73,1);
+  letter-spacing: 0.04px;
+}
+#Permission {
+  left: 271px;
+  top: 124px;
+  position: absolute;
+  overflow: visible;
+  width: 66px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(61,75,73,1);
+  letter-spacing: 0.04px;
 }

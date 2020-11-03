@@ -5,6 +5,7 @@ import Web3 from 'web3';
 import ipfs from './ipfs';
 
 import "./App.css";
+// import "./webApp.js"
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null, buffer:null, value:'', ipfsHash:''};
@@ -80,19 +81,6 @@ class App extends Component {
   };
 
 
-  // runExample = async () => {
-  //   const { accounts, contract } = this.state;
-
-  //   // Stores a given value, 5 by default.
-  //   await contract.methods.set(5).send({ from: accounts[0] });
-
-  //   // Get the value from the contract to prove it worked.
-  //   const response = await contract.methods.get().call();
-
-  //   // Update state with the result.
-  //   this.setState({ storageValue: response });
-  // };
-
   handleChange(event) {
     event.preventDefault()
     this.setState({value: event.target.value});
@@ -117,12 +105,15 @@ class App extends Component {
     })
   }
 
+  //Javascript Basic View Code
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
-      <div className="App">
+    <div id="MainPage" className="App">
+      <div>
         <h1>Medicine For You</h1>
         <h2>This transaction is stored on IPFS & The Ethereum Blockchain!</h2>
         <h2>Confirmation</h2>
@@ -141,6 +132,7 @@ class App extends Component {
           <input type="submit"/>
         </form>
       </div>
+    </div>
     );
   }
 }
